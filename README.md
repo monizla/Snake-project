@@ -12,7 +12,7 @@ Our snake project for ECE 287
   http://www.alteraforum.com/forum/showthread.php?t=46549
   
   Code that was borrowed from previous projects, and NOT marked as such in the .v file:
-  
+  '''
   //======== BLOKKER =======//
 //Snakehead_Parameters
 localparam Snakehead_L = 31'd0;
@@ -136,9 +136,10 @@ localparam body14_R = body14_L + 31'd40;
 localparam body14_T = 31'd0;
 localparam body14_B = body14_T + 31'd40;
 assign body14 =((X >= body14_L + body14X)&&(X <= body14_R + body14X)&&(Y >= body14_T+ body14Y)&&(Y <= body14_B + body14Y));
-
+'''
 This code was included in the blokker program, we edited the localparam statements, but assign statements are as they were in the previous project, as they are implementations for the VGA and would potentially cause errors if edited.
 
+'''
 if(Snakehead) begin
 		player = 1'b1;
 		side = 1'b0;
@@ -212,7 +213,7 @@ if(Snakehead) begin
 		topWall = 1'b0;
 		end
 	end
-
+'''
 This code was used to tell the VGA how to print the game objects, we edited the variable names to make our code easier to read, and changed the if statements on some of the parameters to allow the code to function as a snake game.
 
 
