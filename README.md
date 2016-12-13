@@ -1,9 +1,18 @@
 # Snake-project
-Our snake project for ECE 287
+Final project report below
 
+A snake game made on the FPGA using keyboard input and VGA output
 
+Project for ECE 287
 
+Lucas Moniz, Brandon Wallace
 
+# Our Goal
+  for our project, we wanted to make a snake game using the FPGA board. Our game was planned to use the PS/2 port to implement a keyboard for input, and a VGA to output display to a monitor. Our challenges for this project were implementing a keyboard to the FPGA board, displaying our game via the VGA port, and implementing the logic for snake with minimal bugs in our design.
+  
+# The report
+   
+   We began our work researching how to implement the VGA port and PS/2 port on the FPGA board. The PS/2 keyboard that we designed functioned by searching for the "Break" signal which is represented by a hexadecimal value "F0" from the PS/2 input signal. This design was flawed because it relied on "negedge clk" which would cause the keyboard to lock up after a few clock cycles. We fixed this by implementing our directional design with a separate keyboard module, which made the keyboard function by searching for the hex code for the input from the keyboard instead of the break code. We implemented this with a "Controller" variable that was passed to a case statement that increased the respective X or Y position of the character head.
 # Citations
   Our final project was started from a previous project, this project can be found at:
   https://github.com/bdshaffer73/Blokker-fpga
